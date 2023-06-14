@@ -1,0 +1,492 @@
+{
+	"info": {
+		"_postman_id": "7a7877c1-a268-45a5-bec3-00b246b57a33",
+		"name": "library-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19656661"
+	},
+	"item": [
+		{
+			"name": "login & logout",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/logout",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "books",
+			"item": [
+				{
+					"name": "get books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/books",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "test book",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "actually me",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "none desc",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "1515",
+									"type": "text"
+								},
+								{
+									"key": "in_stock",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "tete",
+									"value": "twe",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/books",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get book info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/books/11",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"books",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update book info",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/books/11?title=new test changes",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"books",
+								"11"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "new test changes"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/books/11",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"books",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "customers",
+			"item": [
+				{
+					"name": "get customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/customers",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "test name",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "test surname",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "testEmail@test.net",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "test_user123",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "+795858595959",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/customers",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get customer info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/customers/11",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"customers",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update customer info",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/customers/12?phone=new test changes",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"customers",
+								"12"
+							],
+							"query": [
+								{
+									"key": "phone",
+									"value": "new test changes"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/customers/12",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"customers",
+								"12"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "get orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/orders",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "customer_id",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "book_id",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "5400",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "processing",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/orders",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get order info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/orders/111",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"orders",
+								"111"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update order info",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/orders/11?book_id=6&quantity=10",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"orders",
+								"11"
+							],
+							"query": [
+								{
+									"key": "book_id",
+									"value": "6"
+								},
+								{
+									"key": "quantity",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/orders/11",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"orders",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://library-api/api",
+			"type": "string"
+		}
+	]
+}
